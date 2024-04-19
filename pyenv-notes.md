@@ -1,0 +1,4 @@
+- `pyenv versions` --> to check all available python versions
+- `pyenv install <version_no>` ---> to install a particular python version
+- `pyenv shell <version_no>` ---> to activate python version for the current bash shell running
+- `pyenv global <version_no>` ---> to enable a python version globally system wide.
