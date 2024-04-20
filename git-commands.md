@@ -11,7 +11,11 @@
 * **
 
 > **Commands:**
+
 - `git init`
+- `git config`
+  - `git config --global user.name "Amit Vikram Raj"`
+  - `git config --global user.email "xyz@email.com`
 - `git add <file>`
 - `git commit -m "message"`
 - `git pull [origin xxx]`
