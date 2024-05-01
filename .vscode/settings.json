@@ -1,8 +1,4 @@
 {
-    "python.formatting.provider": "black",
-    "python.formatting.blackArgs": [
-        "--line-length=99"
-    ],
     "black-formatter.args": [
         "--line-length=99"
     ],
@@ -16,7 +12,5 @@
             "color": "lightgreen",
             "column": 99
         }
-    ],
-    "editor.defaultFoldingRangeProvider": null,
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    ]
 }
