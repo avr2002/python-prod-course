@@ -3,6 +3,9 @@
     "python.formatting.blackArgs": [
         "--line-length=99"
     ],
+    "black-formatter.args": [
+        "--line-length=99"
+    ],
     "editor.formatOnSave": true,
     "editor.rulers": [
         {
@@ -15,5 +18,5 @@
         }
     ],
     "editor.defaultFoldingRangeProvider": null,
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "ms-python.black-formatter",
 }

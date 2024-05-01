@@ -18,13 +18,9 @@ parallel_keys = {
 
 # long lines of code
 value = "hi"
-value.strip("a").strip("b").strip("c").strip("d").strip("e").strip("f").strip(
-    "g"
-).strip("h").strip("h").strip("h").strip("h").strip("h").strip("h").strip("h").strip(
+value.strip("a").strip("b").strip("c").strip("d").strip("e").strip("f").strip("g").strip(
     "h"
-).strip(
-    "h"
-).strip(
+).strip("h").strip("h").strip("h").strip("h").strip("h").strip("h").strip("h").strip("h").strip(
     "h"
 ).strip(
     "h"
