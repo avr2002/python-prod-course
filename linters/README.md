@@ -102,3 +102,18 @@ pylint --help
   - `darglint linters/linting.py -s=google`
   - [Docs - darglint](https://github.com/terrencepreilly/darglint)
   - [Docs - darglint2](https://github.com/akaihola/darglint2)
+
+
+# isort
+
+- Managing import statements
+- [Docs](https://pycqa.github.io/isort/)
+  
+  - `isort <file_name.py>`
+  - `isort --multi-line VERTICAL_HANGING_INDENT <file_name.py>`: For multi-line imports
+  - `isort --multi-line VERTICAL_HANGING_INDENT <file_name.py> --fgw`: Force multi-line imports
+  
+- [Config-File](https://pycqa.github.io/isort/docs/configuration/config_files.html)
+  - `.isort.cfg`
+
+- Configer in VSCode

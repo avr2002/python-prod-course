@@ -139,11 +139,10 @@ my_string = "Hello, World!   "
 my_variable = 1
 
 
+from __future__ import print_function
+
 import os
 import sys
-
-
-from __future__ import print_function
 
 
 def my_function():
