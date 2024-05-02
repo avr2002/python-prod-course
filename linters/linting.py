@@ -25,7 +25,8 @@ def divide_numbers(a: int, b: float) -> float:
     return a / b
 
 
-## pylint: disable = 
+# disable error messages in pylint
+## pylint: disable =
 # too-many-instance-attributes, missing-class-docstring
 @dataclass
 class Book:
@@ -166,7 +167,8 @@ def my_function(my_variable):
     print(my_variable)
 
 
-my_function()
+my_function()  # noqa: E305
+# disable error messages in flake8
 
 
 def my_function(my_variable):

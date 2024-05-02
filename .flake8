@@ -1,0 +1,6 @@
+[flake8]
+extend-ignore = 
+    # inline comments are not supported, comments should always be above error code. 
+    E305,
+    # darglint error: The docstring parameter type doesn't match function.
+    DAR103

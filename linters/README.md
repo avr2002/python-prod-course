@@ -74,3 +74,31 @@ pylint --help
 
 - Generating `pylint` config file
   - `pylint --generate-rcfile > .pylintrc` 
+  
+
+# Flake8
+
+- [Docs](https://flake8.pycqa.org/en/latest/)
+- [Flake8 Extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
+
+- Disable Error messages:
+  - `flake8 --help`
+  
+  - Using comments on the line that has error: `# noqa: <Error_Code>`
+    - `# noqa: E305`
+  
+  - Command Line: `flake8 --exclude=<Error_Code(s)> file_name.py`
+    - `flake8 --exclude=E305 linting.py`
+    - `flake8 --exclude=E4`
+    - `flake8 --ignore=E305 linting.py`
+
+- Using VScode `setting.json`
+
+- [Flake8 config file](https://flake8.pycqa.org/en/latest/user/configuration.html)
+  - `.flake8` file
+
+
+- `darglint`: Linting tool that helps doctstrings to match the function signature
+  - `darglint linters/linting.py -s=google`
+  - [Docs - darglint](https://github.com/terrencepreilly/darglint)
+  - [Docs - darglint2](https://github.com/akaihola/darglint2)
