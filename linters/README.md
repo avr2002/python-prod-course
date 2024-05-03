@@ -1,3 +1,7 @@
+
+> [Official Course Notes](https://github.com/phitoduck/python-software-development-course)
+
+
 # Pylint
 
 - [Docs](https://pylint.readthedocs.io/en/latest/index.html)
