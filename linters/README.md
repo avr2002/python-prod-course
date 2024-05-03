@@ -117,3 +117,15 @@ pylint --help
   - `.isort.cfg`
 
 - Configer in VSCode
+
+
+# Radon
+
+- `pip install radon`
+
+- [Cyclomatic Complexity](https://radon.readthedocs.io/en/latest/intro.html)
+  - `radon cc linters/cyclomatic_complexity.py`
+  - `radon cc linters/cyclomatic_complexity.py -s`
+  - `raw linters/cyclomatic_complexity.py`
+  
+- [Radon - Flake8](https://radon.readthedocs.io/en/latest/flake8.html)
