@@ -11,3 +11,5 @@ max-line-length = 99
 
 # radon
 radon-max-cc = 10
+
+exclude = .venv
