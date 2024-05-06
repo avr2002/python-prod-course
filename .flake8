@@ -3,7 +3,10 @@ extend-ignore =
     # inline comments are not supported, comments should always be above error code. 
     E305,
     # darglint error: The docstring parameter type doesn't match function.
-    DAR103
+    DAR103,
+    # multiple statements on one line (colon)
+    E701
+
 max-line-length = 99
 
 # radon

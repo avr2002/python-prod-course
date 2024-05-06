@@ -66,16 +66,32 @@ class NewStudent:
 
 
 new_student = NewStudent(
-    **{
+    **{  # type: ignore
         "name": "Amit",
         "age": 21,
         "position": point2d,
         "friends": [
-            NewStudent(**{"name": "Mona", "age": 22, "position": Point(2, 1), "friends": []})
+            NewStudent(
+                **{  # type: ignore
+                    "name": "Mona",
+                    "age": 22,
+                    "position": Point(2, 1),
+                    "friends": [],
+                }
+            )
         ],
     }
 )
 
 print(new_student)
 
-new_student.friends[0].friends[0].friends
+# new_student.friends[0].friends[0].friends
+
+
+# Definining datatypes
+TString = str
+x: TString = "Namaste Duniya"
+
+
+TStudentArgsDictKeys = Union[str, int, Point, List[NewStudent]]
+TStudentArgsDict = Dict[str, TStudentArgsDictKeys]
