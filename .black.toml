@@ -1,0 +1,6 @@
+[black]
+
+line-length = 99
+exclude = [
+    ".venv"
+]
