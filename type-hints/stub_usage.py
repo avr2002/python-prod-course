@@ -10,6 +10,7 @@ duck.swim()
 
 # Another way of type hinting
 
+
 def add(
     a,  # type: int
     b,  # type: int
@@ -17,4 +18,4 @@ def add(
     return a + b
 
 
-add()
+add()  # we can get hints here
