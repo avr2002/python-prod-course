@@ -7,7 +7,8 @@ def add_number(a: float, b: float) -> float:
     returns sum of two numbers.
     """
     warn(
-        message="This is function is deprecated, and will be removed in future versions.",
+        message="This is function is deprecated, and will be removed in future versions.\n\
+                 Use add_numbers() function instead.",
         category=DeprecationWarning,
         stacklevel=2
     )
