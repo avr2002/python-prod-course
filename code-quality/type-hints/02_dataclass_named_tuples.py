@@ -1,12 +1,10 @@
 from __future__ import annotations
 
-from collections import namedtuple
 from dataclasses import dataclass
 from typing import (
     Dict,
     List,
     NamedTuple,
-    Optional,
     TypedDict,
     Union,
 )

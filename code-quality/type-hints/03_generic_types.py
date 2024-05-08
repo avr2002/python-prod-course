@@ -2,14 +2,10 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import (
-    Dict,
     Generic,
     List,
     NamedTuple,
-    Optional,
-    TypedDict,
     TypeVar,
-    Union,
 )
 
 # Generic Types
@@ -23,7 +19,9 @@ from typing import (
 TAddableEntity = TypeVar("TAddableEntity", int, float, str, list, tuple)
 
 
-def make_list_of_addable_entity(a: TAddableEntity, b: TAddableEntity) -> List[TAddableEntity]:
+def make_list_of_addable_entity(
+    a: TAddableEntity, b: TAddableEntity
+) -> List[TAddableEntity]:
     return [a, b]
 
 

@@ -36,12 +36,8 @@ def consume_many_types(
 
 
 from typing import (
-    Any,
     Dict,
-    Iterable,
     List,
-    Literal,
-    Mapping,
     Optional,
     Set,
     Tuple,
@@ -74,13 +70,29 @@ x = Animal
 gecko = x()
 
 
-miscellaneous_values: List[Union[int, float, str, Type]] = [1, 1.0, "hi", object, "hi", 2, list]
+miscellaneous_values: List[Union[int, float, str, Type]] = [
+    1,
+    1.0,
+    "hi",
+    object,
+    "hi",
+    2,
+    list,
+]
 
 # for newer python versions, we can do like this to
 x: int | float | str | Type
 x = "hi"
 
-new_miscellaneous_values: List[int | float | str | Type] = [1, 1.0, "hi", object, "hi", 2, list]
+new_miscellaneous_values: List[int | float | str | Type] = [
+    1,
+    1.0,
+    "hi",
+    object,
+    "hi",
+    2,
+    list,
+]
 
 
 # pre-Python 3.10

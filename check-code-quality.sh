@@ -2,7 +2,6 @@
 
 EXIT_STATUS=0
 
-
 black --config .black.toml code-quality/type-hints/ || ((EXIT_STATUS++))
 pylint --rcfile .pylintrc *.py code-quality/type-hints/*.py || ((EXIT_STATUS++))
 flake8 --config .flake8 code-quality/type-hints/ || ((EXIT_STATUS++))
