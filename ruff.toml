@@ -1,3 +1,5 @@
+line-length = 99
+
 [lint]
 # 1. Enable flake8-bugbear (`B`) rules, in addition to the defaults.
 select = ["E", "F", "B", "ERA"]
@@ -8,16 +10,7 @@ ignore = ["E501"]
 # 3. Avoid trying to fix flake8-bugbear (`B`) violations.
 unfixable = ["B"]
 
-line-length = 99
-
 # 4. Ignore `E402` (import violations) in all `__init__.py` files, and in select subdirectories.
 [lint.per-file-ignores]
 "__init__.py" = ["E402"]
 "**/{tests,docs,tools}/*" = ["E402"]
-
-# # adding isort : doesn't work
-# [tool.ruff.isort]
-# multi_line_output = "VERTICAL_HANGING_INDENT"
-# force_grid_wrap = 2
-# line_length = 99
-# profile = "black"
