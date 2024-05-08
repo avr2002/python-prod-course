@@ -5,8 +5,7 @@ from typing import (
     Dict,
     List,
     NamedTuple,
-    TypedDict,
-    Union,
+    TypedDict, ClassVar, Union,
 )
 
 # named tuple from collections

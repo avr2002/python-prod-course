@@ -132,7 +132,7 @@
         hooks:
         # Run the linter.
         -   id: ruff
-            args: [ --fix, --exit-non-zero-on-fix, --config=pyproject.toml]
+            args: [ --fix, --exit-non-zero-on-fix, --config=ruff.toml]
         # Run the formatter.
         - id: ruff-format
     ```
