@@ -22,18 +22,18 @@ DRAGON_DEFENSE = 0
 def play_game(player_health: int, dragon_health: int, dragon_defense: int) -> None:
     while True:
         print(draw_ascii_art(player_art=PLAYER_ART, dragon_art=DRAGON_ART))
-        
+
         print(
             draw_health_bars(
                 player_health=player_health,
                 dragon_health=dragon_health,
             )
         )
-        
+
         print(draw_defense(player_defense=0, dragon_defense=dragon_defense))
-        
+
         player_move = get_player_move()
-        
+
         if player_move == "a":
             dragon_health = handle_player_attack(dragon_health=dragon_health)
         elif player_move == "h":
@@ -41,13 +41,13 @@ def play_game(player_health: int, dragon_health: int, dragon_defense: int) -> No
         else:
             handle_invalid_input()
             continue
-        
+
         if dragon_health <= 0:
             handle_dragon_defeat()
             break
-        
+
         dragon_move = random.choice(["a", "d", "d", "d"])
-        
+
         if dragon_move == "a":
             player_health = handle_dragon_attack(player_health=player_health)
         else:
