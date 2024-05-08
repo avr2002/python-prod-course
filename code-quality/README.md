@@ -103,6 +103,7 @@
     ```
 
 - `pre-commit autoupdate` to update the versions tools of `.pre-commit-config.yaml` file:
+    - It's adviced to run this command to get updated version of the tools.
     - Previous yaml file got updated to: $\downarrow$
     ```yaml
     repos:
