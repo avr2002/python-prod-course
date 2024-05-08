@@ -30,15 +30,15 @@
 
   - Hooks are local to any given Git repository, and they are not copied over to the new repository when you run git clone. And, since hooks are local, they can be altered by anybody with access to the repository.
 
-  - Maintaining hooks for a team of developers can be a little tricky because the `.git/hooks directory` isn’t cloned with the rest of your project, nor is it under version control. 
-  
+  - Maintaining hooks for a team of developers can be a little tricky because the `.git/hooks directory` isn’t cloned with the rest of your project, nor is it under version control.
+
   - A simple solution to both of these problems is to store your hooks in the actual project directory (above the .git directory). This lets you edit them like any other version-controlled file. To install the hook, you can either create a symlink to it in `.git/hooks`, or you can simply copy and paste it into the `.git/hooks` directory whenever the hook is updated.
 
 
 - **Local Hooks**
 
-    - Local hooks affect only the repository in which they reside. Remember that each developer can alter their own local hooks, so you can't use them as a way to enforce a commit policy. They can, however, make it much easier for developers to adhere to certain guidelines. 
-    
+    - Local hooks affect only the repository in which they reside. Remember that each developer can alter their own local hooks, so you can't use them as a way to enforce a commit policy. They can, however, make it much easier for developers to adhere to certain guidelines.
+
     - Six of the most useful local hooks:
 
         - `pre-commit`
@@ -47,7 +47,7 @@
         - `post-commit`
         - `post-checkout`
         - `pre-rebase`
-    
+
     - **The first 4 hooks let you plug into the entire commit life cycle, and the final 2 let you perform some extra actions or safety checks for the git checkout and git rebase commands, respectively.**
 
     - **All of the pre- hooks let you alter the action that’s about to take place, while the post- hooks are used only for notifications.**
@@ -72,7 +72,7 @@
 
 [pre-commit Docs](https://pre-commit.com/)
 
-- `pre-commit` is a CLI tool to manage all the linter tools <s>in Python</s>(not necessarily only for Python). 
+- `pre-commit` is a CLI tool to manage all the linter tools <s>in Python</s>(not necessarily only for Python).
 - Anything that does static analysis of code can be run by this tool.
 - This `pre-commit` tool refers to a CLI tool that can can install a special script into the git pre-commit hooks.
 - It acts as a manager for other CLI tools.
@@ -100,7 +100,7 @@
         rev: v0.0.0  # randomly added, will get changed after running autoupdate command
         hooks:
         -   id: pylint
-    ``` 
+    ```
 
 - `pre-commit autoupdate` to update the versions tools of `.pre-commit-config.yaml` file:
     - Previous yaml file got updated to: $\downarrow$
@@ -124,7 +124,7 @@
     - `pylint` will respect the config present in `.pylintrc` file when run.
     - OR we can also add our custom config as shown in [homepage of pre-commit docs](https://pre-commit.com/index.html).
     - We can also find pre-written config in README of certain hooks like `ruff`
-    
+
     ```yaml
     - repo: https://github.com/astral-sh/ruff-pre-commit
         # Ruff version.
@@ -132,7 +132,7 @@
         hooks:
         # Run the linter.
         -   id: ruff
-            args: [ --fix, --exit-non-zero-on-fix ]
+            args: [ --fix, --exit-non-zero-on-fix, --config=pyproject.toml]
         # Run the formatter.
         - id: ruff-format
     ```
