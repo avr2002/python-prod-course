@@ -72,14 +72,67 @@
 
 [pre-commit Docs](https://pre-commit.com/)
 
-- `pre-commit` is a CLI tool to manage all the linter tools in Python. 
+- `pre-commit` is a CLI tool to manage all the linter tools <s>in Python</s>(not necessarily only for Python). 
 - Anything that does static analysis of code can be run by this tool.
 - This `pre-commit` tool refers to a CLI tool that can can install a special script into the git pre-commit hooks.
 - It acts as a manager for other CLI tools.
 - `pip install pre-commit`
 
-- `pre-commit sample-config > .pre-commit-config.yaml` : Produce a sample .pre-commit-config.yaml file
+- `pre-commit sample-config > .pre-commit-config.yaml` : Produce a sample `.pre-commit-config.yaml` file
 
 - `pre-commit run --all-files` : it's usually a good idea to run the hooks against all of the files when adding new hooks (usually pre-commit will only run on the changed files during git hooks)
 
 - `pre-commit install` to set up the git hook scripts
+
+- We can specific hooks like `pylint` or `black` or `isort` by finding the repo link on [official docs](https://pre-commit.com/hooks.html) like:
+
+    ```yaml
+    repos:
+    -   repo: https://github.com/pre-commit/pre-commit-hooks
+        rev: v3.2.0
+        hooks:
+        -   id: trailing-whitespace
+        -   id: end-of-file-fixer
+        -   id: check-yaml
+        -   id: check-added-large-files
+
+    -   repo: https://github.com/PyCQA/pylint
+        rev: v0.0.0  # randomly added, will get changed after running autoupdate command
+        hooks:
+        -   id: pylint
+    ``` 
+
+- `pre-commit autoupdate` to update the versions tools of `.pre-commit-config.yaml` file:
+    - Previous yaml file got updated to: $\downarrow$
+    ```yaml
+    repos:
+    -   repo: https://github.com/pre-commit/pre-commit-hooks
+        rev: v4.6.0
+        hooks:
+        -   id: trailing-whitespace
+        -   id: end-of-file-fixer
+        -   id: check-yaml
+        -   id: check-added-large-files
+
+    -   repo: https://github.com/PyCQA/pylint
+        rev: v3.1.0
+        hooks:
+        -   id: pylint
+            args: [--rcfile=.pylintrc] # adding args for this hook
+    ```
+
+    - `pylint` will respect the config present in `.pylintrc` file when run.
+    - OR we can also add our custom config as shown in [homepage of pre-commit docs](https://pre-commit.com/index.html).
+    - We can also find pre-written config in README of certain hooks like `ruff`
+    
+    ```yaml
+    - repo: https://github.com/astral-sh/ruff-pre-commit
+        # Ruff version.
+        rev: v0.4.3
+        hooks:
+        # Run the linter.
+        -   id: ruff
+            args: [ --fix, --exit-non-zero-on-fix ]
+        # Run the formatter.
+        - id: ruff-format
+    ```
